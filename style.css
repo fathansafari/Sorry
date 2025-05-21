@@ -1,0 +1,100 @@
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background: #ff4b4b;
+  position: relative;
+  transform: rotate(45deg);
+  margin: 50px auto;
+  animation: heartbeat 1.2s infinite;
+}
+
+.heart:before, .heart:after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: #ff4b4b;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  left: -50px;
+}
+
+.heart:after {
+  top: -50px;
+}
+
+@keyframes heartbeat {
+  0% { transform: rotate(45deg) scale(1); }
+  50% { transform: rotate(45deg) scale(1.2); }
+  100% { transform: rotate(45deg) scale(1); }
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.message {
+  color: #fff;
+  font-size: 1.2em;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+button {
+  background: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #ff4b4b;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#popupMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  font-size: 1.2em;
+  color: #ff4b4b;
+}
+
+.hidden {
+  display: none;
+}
+
+.couple-image {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
